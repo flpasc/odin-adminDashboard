@@ -1,4 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Caveat:wght@700&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poor+Story&family=Satisfy&family=Source+Serif+Pro:ital,wght@1,300&family=Tangerine&display=swap");
+
 body {
+	font-family: "PT Sans", sans-serif;
+	font-style: normal;
+
 	width: 100vw;
 	height: 100vh;
 	margin: 0px;
@@ -8,7 +13,7 @@ body {
 .container {
 	height: 100vh;
 	display: grid;
-	grid-template: 150px 1fr / 200px 1fr;
+	grid-template: 160px 1fr / 200px 1fr;
 }
 
 .sideboard {
@@ -34,11 +39,16 @@ body {
 }
 
 .controls img {
+	position: relative;
+	left: 50px;
 	height: 50px;
 	border-radius: 50%;
 }
 
 .controls a {
+	position: relative;
+	left: 75px;
+	top: 10px;
 	color: black;
 	padding-left: 50px;
 }
@@ -72,14 +82,27 @@ li {
 }
 
 .welcome-text {
+	font-style: italic;
 	align-self: end;
 }
 
 .user-name {
-	font-size: 30px;
+	position: relative;
+	bottom: 12px;
+	right: 5px;
+	font-style: bold;
+	font-size: clamp(12px, 3vw, 30px);
+}
+
+.share {
+	display: inline-block;
+	text-align: start;
 }
 
 .share > ul {
+	position: relative;
+	bottom: 20px;
+	right: 20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 }
@@ -97,12 +120,28 @@ li {
 
 .single-project {
 	display: flex;
-	height: 200px;
+	flex-direction: column;
+	padding: 10px 20px;
+	height: 250px;
 	margin: 10px;
 	background-color: rgb(255, 255, 255);
 	border-left: 10px solid orange;
 	border-radius: 5px;
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.513);
+}
+
+.single-project p {
+	max-height: 80px;
+}
+
+.links ul {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+.links ul > li {
+	padding: 20px 0px;
 }
 
 .trending {
@@ -157,7 +196,7 @@ h4 {
 	padding-top: 10px;
 }
 
-p {
+.announcements p {
 	color: rgb(99, 100, 101);
 	margin: 2px;
 	border-bottom: 1px dotted rgb(196, 196, 196);
@@ -179,7 +218,7 @@ button {
 
 input[type="text"] {
 	border-radius: 15px;
-	width: 80%;
+	width: 60%;
 	appearance: none;
 	background-color: rgb(228, 232, 240);
 	border: 1px;
@@ -221,7 +260,7 @@ input[type="text"] {
 
 .search {
 	padding-left: 20px;
-	padding-top: 15px;
+	padding-top: 25px;
 }
 
 a {
