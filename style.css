@@ -82,11 +82,14 @@ li {
 }
 
 .welcome-text {
+	padding-bottom: 2px;
 	font-style: italic;
 	align-self: end;
+	font-size: clamp(12px, 2vw, 20px);
 }
 
 .user-name {
+	padding-top: 5px;
 	position: relative;
 	bottom: 12px;
 	right: 5px;
@@ -113,7 +116,7 @@ li {
 
 .project-grid {
 	overflow: auto;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	display: grid;
 	padding: 5px;
 }
@@ -125,13 +128,26 @@ li {
 	height: 250px;
 	margin: 10px;
 	background-color: rgb(255, 255, 255);
+	border: 1px solid white;
 	border-left: 10px solid orange;
 	border-radius: 5px;
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.513);
 }
 
+.single-project:hover {
+	border: 1px solid black;
+	border-left: 10px solid rgb(85, 144, 209);
+}
+
 .single-project p {
+	color: rgb(99, 100, 101);
+	flex: 2;
 	max-height: 80px;
+}
+
+.links {
+	margin-top: auto;
+	align-self: flex-end;
 }
 
 .links ul {
@@ -141,7 +157,7 @@ li {
 }
 
 .links ul > li {
-	padding: 20px 0px;
+	padding: 0px 0px;
 }
 
 .trending {
@@ -200,6 +216,7 @@ h4 {
 	color: rgb(99, 100, 101);
 	margin: 2px;
 	border-bottom: 1px dotted rgb(196, 196, 196);
+	padding-bottom: 5px;
 }
 
 i {
@@ -216,6 +233,11 @@ button {
 	border: 0px;
 }
 
+button:hover {
+	background-color: orange;
+	border: 1px solid white;
+}
+
 input[type="text"] {
 	border-radius: 15px;
 	width: 60%;
@@ -223,6 +245,10 @@ input[type="text"] {
 	background-color: rgb(228, 232, 240);
 	border: 1px;
 	padding: 5px 10px;
+}
+
+input[type="text"]:focus {
+	background-color: rgba(85, 145, 209, 0.111);
 }
 
 .avatar img,
@@ -272,4 +298,9 @@ a {
 
 li {
 	padding: 10px 0px;
+}
+
+.nav li:hover,
+.nav a:hover {
+	color: orange;
 }
